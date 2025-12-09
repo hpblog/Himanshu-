@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VidScribe AI - Video Idea Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#3F51B5', // Indigo
+                '50': '#E8EAF6',
+                '100': '#C5CAE9',
+                '200': '#9FA8DA',
+                '300': '#7986CB',
+                '400': '#5C6BC0',
+                '500': '#3F51B5',
+                '600': '#3949AB',
+                '700': '#303F9F',
+                '800': '#283593',
+                '900': '#1A237E',
+              },
+              secondary: {
+                DEFAULT: '#FF5722', // Deep Orange
+                '50': '#FBE9E7',
+                '100': '#FFCCBC',
+                '200': '#FFAB91',
+                '300': '#FF8A65',
+                '400': '#FF7043',
+                '500': '#FF5722',
+                '600': '#F4511E',
+                '700': '#E64A19',
+                '800': '#D84315',
+                '900': '#BF360C',
+              },
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "@aws-sdk/client-s3": "https://aistudiocdn.com/@aws-sdk/client-s3@^3.947.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-gray-50 dark:bg-slate-950">
+    <div id="root"></div>
+  </body>
+</html>
